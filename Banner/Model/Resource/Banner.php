@@ -3,12 +3,8 @@ class Ccc_Banner_Model_Resource_Banner extends Mage_Core_Model_Resource_Db_Abstr
 {
     protected function _construct()
     {
-        // parent::_construct();
         $this->_init('ccc_banner/banner', 'banner_id');
     }
-    
 }
 
 ?>
-
-

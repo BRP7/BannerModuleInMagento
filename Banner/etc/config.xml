@@ -18,11 +18,11 @@
     </admin>
     <adminhtml>
         <menu>
-            <ccc_banner translate="title" module="adminhtml">
+            <ccc_banner translate="title" module="banner">
                 <title>Banner</title>
                 <sort_order>100</sort_order>
                 <children>
-                    <banner_items translate="title" module="adminhtml">
+                    <banner_items translate="title" module="banner">
                         <title>Manage Banners</title>
                         <action>adminhtml/banner/index</action>
                         <sort_order>10</sort_order>
@@ -30,12 +30,11 @@
                 </children>
             </ccc_banner>
         </menu>
-
-           <layout>
+        <layout>
             <updates>
-                <banner>
-                    <file>banner.xml</file>
-                </banner>
+                <ccc_banner>
+                    <file>ccc_banner.xml</file>
+                </ccc_banner>
             </updates>
         </layout>
     </adminhtml>
@@ -45,6 +44,7 @@
                 <class>Ccc_Banner_Block</class>
             </banner>
         </blocks>
+
         <models>
             <ccc_banner>
                 <class>Ccc_Banner_Model</class>
@@ -52,11 +52,10 @@
             </ccc_banner>
             <ccc_banner_resource>
                 <class>Ccc_Banner_Model_Resource</class>
-                <!-- <deprecatedNode>cms_mysql4</deprecatedNode> -->
                 <entities>
                     <banner>
                         <table>ccc_banner</table>
-                    </banner>   
+                    </banner>
                 </entities>
             </ccc_banner_resource>
         </models>
@@ -71,10 +70,9 @@
             </banner_setup>
         </resources>
         <helpers>
-                 <banner>
-                      <class>Ccc_Banner_Helper</class>
-                </banner>
+            <banner>
+                <class>Ccc_Banner_Helper</class>
+            </banner>
         </helpers>
     </global>
-
 </config>
